@@ -2,12 +2,17 @@ body{
     font-family: arial;
 }
 
-.todo-grid{
+.todo-grid,
+.todo-input-grid{
     display: grid;
     grid-template-columns: 200px 150px 100px;
     column-gap: 10px;
     row-gap: 10px;
     margin-bottom: 10px;
+    align-items: center;
+}
+.todo-input-grid{
+    align-items: stretch;
 }
 
 .name-input,
