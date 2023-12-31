@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(25,25,25);
+    font-family: arial;
+}
+
+.add-friends-list, .friends-list{
+    height: 550px;
+    background-color: rgb(235, 235, 235);
+}
+.add-friends-title, .friends-title{
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    color: rgb(0, 140, 255);
+}
+.friends-title{
+    margin-top: 40px;
+}
+
+.profile{
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+    background-color: white;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.profile-photo{
+    width: 200px;
+    height: 200px;
+}
+.profile-pic{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.profile-info{
+    width: 200px;
+    height: 200px;
+    margin-left: 15px;
+}
+.profile-name{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.profile-age, .profile-location{
+    font-size: 20px;
+    color: rgb(121, 121, 121);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.add-button{
+    width: 165px;
+    height: 50px;
+    background-color: rgb(0, 140, 255);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.add-button:hover{
+    background-color: rgb(0, 120, 255);
+}
+
+.delete-button{
+    width: 165px;
+    height: 50px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
