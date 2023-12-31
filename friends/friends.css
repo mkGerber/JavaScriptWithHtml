@@ -6,6 +6,7 @@ body{
 .add-friends-list, .friends-list{
     height: 550px;
     background-color: rgb(235, 235, 235);
+    margin-right: 100px;
 }
 .add-friends-title, .friends-title{
     font-size: 50px;
@@ -82,4 +83,7 @@ body{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+}
+.delete-button:hover{
+    background-color: rgb(255, 0, 0, 0.8);
 }

@@ -1,15 +1,9 @@
 let addFriends;
 let addedFriends = [];
- 
- const friends = [
-    localStorage.getItem('addedFriends'),
- ]
- const unaddedFriends = [
-    localStorage.getItem('addFriends'),
- ]
 
- if (true){
-    addFriends = [
+if (JSON.parse(localStorage.getItem('addedFriends')) === null && JSON.parse(localStorage.getItem('addFriends')) === null){
+    localStorage.setItem('addedFriends', JSON.stringify([]));
+    localStorage.setItem('addFriends', JSON.stringify([
         {
             name: 'Alex',
             age: 30,
@@ -30,11 +24,13 @@ let addedFriends = [];
             age: 35,
             location: 'Texas'
         }
-    ]
- } else {
-    addFriends = unaddedFriends;
-    addedFriends = friends;
- } 
+    ]));
+} else {
+    addedFriends = JSON.parse(localStorage.getItem('addedFriends'));
+    addFriends = JSON.parse(localStorage.getItem('addFriends'));
+    
+}
+
 
 function addFriend(){
     let html = '';
@@ -65,8 +61,6 @@ function addFriend(){
     }
     document.querySelector('.friends-section').innerHTML = html;
 }
-
-addFriend();
 
 function friendsList(){
     let html = '';
@@ -99,7 +93,10 @@ function friendsList(){
 }
 
 function setLocalStorage(){
-    localStorage.setItem('addedFriends', addedFriends);
-    localStorage.setItem('addFriends', addFriends);
+    localStorage.setItem('addedFriends', JSON.stringify(addedFriends));
+    localStorage.setItem('addFriends', JSON.stringify(addFriends));
 }
+
+addFriend();
+friendsList();
 
