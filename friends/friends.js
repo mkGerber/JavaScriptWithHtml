@@ -53,6 +53,7 @@ function addFriend(){
                 friendsList();
                 addFriend();
                 setLocalStorage()
+                changeTotalFriends();
                 ">Add Friend</button>
             </div>
         </div>
@@ -83,6 +84,7 @@ function friendsList(){
                 addFriend();
                 friendsList();
                 setLocalStorage()
+                changeTotalFriends();
                 ">Remove Friend</button>
             </div>
         </div>
@@ -97,6 +99,14 @@ function setLocalStorage(){
     localStorage.setItem('addFriends', JSON.stringify(addFriends));
 }
 
+function changeTotalFriends(){
+    let totalFriends = addedFriends.length;
+    document.querySelector('.friend-count-div').innerHTML = `
+    <div class="friend-count">${totalFriends}</div>
+    <div class="friend-count-text tooltip">Total Friends: ${totalFriends}</div>
+    `;
+}
+
 addFriend();
 friendsList();
-
+changeTotalFriends();

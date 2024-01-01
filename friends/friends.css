@@ -1,12 +1,96 @@
 body{
     background-color: rgb(25,25,25);
     font-family: arial;
+    margin-bottom: 1000px;
+    margin-top: 70px;
+    margin-left: 0px;
+}
+.header{
+    display: flex;
+    position: fixed;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 70px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+}
+.left{
+    width: 20%;
+    height: 100%;
+    
+}
+.center{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(0, 140, 255);
+    cursor: pointer;
+}
+.right{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.me{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+.me:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.friend-count{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    background-color: rgb(0, 140, 255);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    transition: box-shadow 0.5s, padding 0.5s;
+}
+
+.friend-count:hover{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    padding: 10px 15px;
+}
+.friend-count-text{
+    position: absolute;
+    color: white;
+    top: 16px;
+    right: 100px;
+    background-color: grey;
+    padding: 10px;
+    opacity: 0;
+    z-index: 200;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+.friend-count-div{
+    cursor: pointer;
+}
+.friend-count-div:hover .friend-count-text{
+    opacity: 0.5;
 }
 
 .add-friends-list, .friends-list{
     height: 550px;
     background-color: rgb(235, 235, 235);
-    margin-right: 100px;
 }
 .add-friends-title, .friends-title{
     font-size: 50px;
@@ -68,6 +152,7 @@ body{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
 .add-button:hover{
     background-color: rgb(0, 120, 255);
@@ -83,6 +168,7 @@ body{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
 .delete-button:hover{
     background-color: rgb(255, 0, 0, 0.8);
